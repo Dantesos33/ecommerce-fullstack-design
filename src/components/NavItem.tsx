@@ -5,16 +5,19 @@ type NavItemProps = {
   href: string;
   icon: ReactNode;
   label: string;
+  className?: string;
 };
 
-const NavItem = ({ href, icon, label }: NavItemProps) => {
+const NavItem = ({ href, icon, label, className = "" }: NavItemProps) => {
   return (
     <Link
       href={href}
-      className="flex flex-col items-center gap-2 hover:text-blue-800"
+      className={`flex flex-col items-center gap-1.5 text-slate-600 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 group ${className}`}
     >
-      {icon}
-      <div>{label}</div>
+      <div className="p-2 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
+        {icon}
+      </div>
+      <div className="text-xs font-medium hidden md:block">{label}</div>
     </Link>
   );
 };

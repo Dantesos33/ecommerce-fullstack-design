@@ -1,23 +1,69 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Searchbar from "@/components/Searchbar";
 import Navbar from "./Navbar";
+import MobileSidebar from "./MobileSidebar";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <header className="flex items-center justify-between px-18 py-4 bg-blue-500">
-      <div className="flex items-center gap-2 cursor-pointer">
-        <Image
-          src="/assets/logo.jpg"
-          alt="Logo"
-          width={50}
-          height={50}
-          className="rounded-lg"
-        />
-        <div>Dees Mart</div>
-      </div>
-      <Searchbar />
-      <Navbar />
-    </header>
+    <>
+      <header className="bg-white border-b border-slate-100 shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4">
+          {/* ── Top bar: always a single row ── */}
+          <div className="flex items-center justify-between gap-3 md:gap-6 lg:gap-10">
+            {/* Left: Hamburger (mobile only) + Logo */}
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                aria-label="Open menu"
+                onClick={() => setSidebarOpen(true)}
+                className="cursor-pointer md:hidden p-2 -ml-1 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
+              >
+                <FaBars size={18} />
+              </button>
+
+              <div className="flex items-center gap-2 cursor-pointer group transition-all duration-300 transform active:scale-95">
+                <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg">
+                  <Image
+                    src="/assets/logo.jpg"
+                    alt="Dees Mart logo"
+                    width={40}
+                    height={40}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+                <span className="text-xl md:text-2xl font-black tracking-tight text-slate-800 group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">
+                  Dees Mart
+                </span>
+              </div>
+            </div>
+
+            {/* Center: Searchbar — tablet/desktop only (md+) */}
+            <div className="hidden md:flex justify-center flex-1 mx-2 lg:mx-4 min-w-0">
+              <Searchbar />
+            </div>
+
+            {/* Right: Navbar icons */}
+            <Navbar />
+          </div>
+
+          {/* ── Mobile-only searchbar row (below top bar) ── */}
+          <div className="mt-3 md:hidden">
+            <Searchbar className="max-w-full" />
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile sidebar drawer */}
+      <MobileSidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+    </>
   );
 };
 

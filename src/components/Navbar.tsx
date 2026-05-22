@@ -6,10 +6,20 @@ import NavItem from "./NavItem";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center gap-4">
+    <nav className="flex flex-row-reverse md:flex-row items-center gap-3 md:gap-4 whitespace-nowrap shrink-0">
       <NavItem href="/profile" icon={<FaUser size={18} />} label="Profile" />
-      <NavItem href="/message" icon={<FaMessage size={18} />} label="Message" />
-      <NavItem href="/orders" icon={<FaHeart size={18} />} label="Orders" />
+      <NavItem
+        className="hidden md:flex"
+        href="/message"
+        icon={<FaMessage size={18} />}
+        label="Message"
+      />
+      <NavItem
+        className="hidden md:flex"
+        href="/orders"
+        icon={<FaHeart size={18} />}
+        label="Orders"
+      />
       <NavItem
         href="/cart"
         icon={<FaCartShopping size={18} />}
