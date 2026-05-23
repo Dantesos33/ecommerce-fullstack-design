@@ -10,6 +10,7 @@ import {
 import { FaGooglePlay } from "react-icons/fa6";
 import Image from "next/image";
 import NewsLetter from "./NewsLetter";
+import { assets } from "@/data/assets";
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -58,7 +59,7 @@ const Footer = () => {
               <Link href="/" className="flex items-center gap-2 group w-fit">
                 <div className="relative w-9 h-9 overflow-hidden rounded-lg shrink-0">
                   <Image
-                    src="/assets/logo.jpg"
+                    src={assets.brand.logo}
                     alt="Dees Mart logo"
                     width={36}
                     height={36}

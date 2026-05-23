@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Searchbar from "@/components/Searchbar";
+import { assets } from "@/data/assets";
 import Navbar from "./Navbar";
 import MobileSidebar from "./MobileSidebar";
 import { FaBars } from "react-icons/fa";
@@ -29,7 +30,7 @@ const Header = () => {
               <div className="flex items-center gap-2 cursor-pointer group transition-all duration-300 transform active:scale-95">
                 <div className="relative w-9 h-9 md:w-10 md:h-10 overflow-hidden rounded-lg">
                   <Image
-                    src="/assets/logo.jpg"
+                    src={assets.brand.logo}
                     alt="Dees Mart logo"
                     width={40}
                     height={40}

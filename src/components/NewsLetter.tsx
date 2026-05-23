@@ -33,6 +33,8 @@ const NewsLetter = () => {
               <FaEnvelope size={15} />
             </span>
             <input
+              name="email"
+              aria-label="Email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
