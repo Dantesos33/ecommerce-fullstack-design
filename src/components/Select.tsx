@@ -14,7 +14,7 @@ export default function Select({
   ...props
 }: SelectProps) {
   const baseStyles =
-    "outline-none bg-transparent text-slate-600 cursor-pointer hover:bg-slate-50 transition-colors border-none mr-2";
+    "outline-none bg-transparent text-sm text-slate-600 cursor-pointer hover:bg-slate-50 transition-colors border-none mr-2";
   const stretchStyles = stretch ? "self-stretch px-2" : "px-4 py-2";
 
   return (

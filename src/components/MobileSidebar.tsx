@@ -58,7 +58,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
             <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
               <FaUser size={16} className="text-slate-400" />
             </div>
-            <p className="text-sm text-slate-700 font-medium leading-tight">
+            <p className="text-ui font-medium leading-tight">
               <Link
                 href="/signin"
                 onClick={onClose}
@@ -97,7 +97,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
               <span className="text-slate-400 group-hover:text-blue-500 transition-colors">
                 {item.icon}
               </span>
-              <span className="text-sm font-medium">{item.label}</span>
+              <span className="text-ui font-medium">{item.label}</span>
             </Link>
           ))}
         </nav>
@@ -116,7 +116,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
               <span className="text-slate-400 group-hover:text-blue-500 transition-colors">
                 {item.icon}
               </span>
-              <span className="text-sm font-medium">{item.label}</span>
+              <span className="text-ui font-medium">{item.label}</span>
             </Link>
           ))}
         </nav>
@@ -128,7 +128,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
               key={label}
               href="#"
               onClick={onClose}
-              className="text-xs text-slate-400 hover:text-blue-500 transition-colors duration-200"
+              className="text-caption hover:text-blue-500 transition-colors duration-200"
             >
               {label}
             </Link>

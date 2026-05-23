@@ -36,7 +36,7 @@ const Header = () => {
                     className="object-contain w-full h-full"
                   />
                 </div>
-                <span className="text-xl md:text-2xl font-black tracking-tight text-slate-800 group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">
+                <span className="text-brand group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">
                   Dees Mart
                 </span>
               </div>

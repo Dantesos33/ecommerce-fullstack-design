@@ -15,7 +15,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "cursor-pointer transition-all duration-300 flex items-center justify-center gap-2 font-medium overflow-hidden";
+    "cursor-pointer transition-all duration-300 flex items-center justify-center gap-2 text-sm font-medium overflow-hidden";
 
   const variants = {
     primary:

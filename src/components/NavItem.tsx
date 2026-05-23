@@ -17,7 +17,9 @@ const NavItem = ({ href, icon, label, className = "" }: NavItemProps) => {
       <div className="p-2 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
         {icon}
       </div>
-      <div className="text-xs font-medium hidden md:block">{label}</div>
+      <div className="text-caption md:text-ui font-medium hidden md:block">
+        {label}
+      </div>
     </Link>
   );
 };
