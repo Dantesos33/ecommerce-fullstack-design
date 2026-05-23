@@ -5,6 +5,7 @@
 export const assets = {
   brand: {
     logo: "/assets/brand/dees-mart-logo.jpg",
+    logoColored: "/assets/brand/logo-colored.png",
   },
   hero: {
     bannerElectronics: "/assets/hero/banner-electronics.png",
