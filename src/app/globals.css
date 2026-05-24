@@ -59,4 +59,24 @@
   .text-micro {
     @apply text-[11px] sm:text-xs uppercase tracking-wide text-slate-400 leading-tight;
   }
+
+  /* Recommended items responsive grid */
+  .recommended-grid {
+    @apply grid grid-cols-2 gap-3;
+  }
+  @media (min-width: 640px) {
+    .recommended-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 768px) {
+    .recommended-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .recommended-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
 }

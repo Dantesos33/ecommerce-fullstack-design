@@ -3,6 +3,7 @@ import BottomNavbar from "@/components/BottomNavbar";
 import HeroSection from "@/components/hero/HeroSection";
 import ProductSections from "@/components/product-sections/ProductSections";
 import RfqSection from "@/components/rfq/RfqSection";
+import RecommendedItems from "@/components/RecommendedItems";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <HeroSection />
         <ProductSections />
         <RfqSection />
+        <RecommendedItems />
       </main>
       <Footer />
     </div>

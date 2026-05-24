@@ -72,4 +72,11 @@ export const recommendations: Product[] = [
     price: 80.95,
     image: assets.products.kettle,
   },
+  {
+    id: 10,
+    title: "Polo shirt slim fit",
+    subtitle: "Classic style",
+    price: 14.99,
+    image: assets.products.polo,
+  },
 ];
