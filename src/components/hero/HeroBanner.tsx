@@ -6,7 +6,7 @@ const HeroBanner = () => {
   return (
     <article className="relative w-full aspect-[800/420] md:min-h-[300px] md:aspect-auto lg:min-h-[360px] rounded-lg overflow-hidden">
       <Image
-        src={assets.hero.bannerElectronics}
+        src={assets.backgrounds.heroBg}
         alt="Latest trending electronic items"
         fill
         priority

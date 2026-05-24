@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import BottomNavbar from "@/components/BottomNavbar";
 import HeroSection from "@/components/hero/HeroSection";
 import ProductSections from "@/components/product-sections/ProductSections";
+import RfqSection from "@/components/rfq/RfqSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ProductSections />
+        <RfqSection />
       </main>
       <Footer />
     </div>
