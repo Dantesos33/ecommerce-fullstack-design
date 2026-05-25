@@ -16,6 +16,13 @@ export const assets = {
     headphones: "/assets/products/headphones.png",
     pot: "/assets/products/pot.png",
     kettle: "/assets/products/kettle.png",
+    smartphone: "/assets/products/smartphone.png",
+    smartphone2: "/assets/products/smartphone-2.png",
+    smartwatch: "/assets/products/smartwatch.png",
+    camera: "/assets/products/camera.png",
+    laptop: "/assets/products/laptop.png",
+    gopro: "/assets/products/go-pro.png",
+    headset: "/assets/products/headset.png",
   },
   backgrounds: {
     customizeBg: "/assets/backgrounds/customize-bg.png",

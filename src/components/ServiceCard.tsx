@@ -25,7 +25,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           style={{ objectFit: "cover", zIndex: 0 }}
         />
         {/* Dark scrim — must be after Image and have higher z-index */}
-        <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.30)", zIndex: 1 }} />
+        <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)", zIndex: 1 }} />
       </div>
 
       {/* Icon badge — overlaps image/text divide */}
