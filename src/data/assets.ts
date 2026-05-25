@@ -55,7 +55,7 @@ export const assets = {
     dk: "/assets/flags/dk-2x.png",
     fr: "/assets/flags/fr-2x.png",
     gb: "/assets/flags/gb-2x.png",
-    icon: "/assets/flags/icon.png",
+    au: "/assets/flags/au-2x.png",
     it: "/assets/flags/it-2x.png",
     ru: "/assets/flags/ru-2x.png",
     us: "/assets/flags/us-2x.png",
