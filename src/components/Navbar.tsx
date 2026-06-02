@@ -1,5 +1,5 @@
 import { FaUser } from "react-icons/fa";
-import { FaMessage } from "react-icons/fa6";
+import { FaStore } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa6";
 import NavItem from "./NavItem";
@@ -10,9 +10,9 @@ const Navbar = () => {
       <NavItem href="/profile" icon={<FaUser size={18} />} label="Profile" />
       <NavItem
         className="hidden md:flex"
-        href="/message"
-        icon={<FaMessage size={18} />}
-        label="Message"
+        href="/products"
+        icon={<FaStore size={18} />}
+        label="Products"
       />
       <NavItem
         className="hidden md:flex"

@@ -3,6 +3,7 @@ import CartHeader from "@/components/cart/CartHeader";
 import CartItemList from "@/components/cart/CartItemList";
 import CartFooterActions from "@/components/cart/CartFooterActions";
 import CartFeatures from "@/components/cart/CartFeatures";
+import SavedForLater from "@/components/cart/SavedForLater";
 import CartSummary from "@/components/cart/CartSummary";
 import PromoBanner from "@/components/PromoBanner";
 
@@ -11,7 +12,6 @@ export default function CartPage() {
   return (
     <div className="w-full bg-slate-50 py-6 md:py-8 min-h-screen">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Dynamic Client Header */}
         <CartHeader />
 
@@ -25,6 +25,9 @@ export default function CartPage() {
 
             {/* Static zero-bundle Server Component */}
             <CartFeatures />
+
+            {/* Saved for later section */}
+            <SavedForLater />
           </div>
 
           {/* Dynamic Order Breakdown Pane */}
