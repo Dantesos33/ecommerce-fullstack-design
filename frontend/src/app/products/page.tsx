@@ -1,12 +1,11 @@
-import React from 'react'
-import ListingSection from "@/components/ListingSection"
+import ListingSection from "@/components/ListingSection";
 
 const ProductPage = () => {
   return (
     <>
-    <ListingSection />
+      <ListingSection />
     </>
-  )
-}
+  );
+};
 
-export default ProductPage
+export default ProductPage;

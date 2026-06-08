@@ -21,7 +21,11 @@ return Application::configure(basePath: dirname(__DIR__))
             'verified' => \App\Http\Middleware\EnsureEmailIsVerified::class,
         ]);
 
-        //
+        // 🌟 Add this block to forcefully kill CSRF validation for your register API
+        $middleware->validateCsrfTokens(except: [
+            'api/register', 
+            'api/*' // Or use wildcards to clear all API endpoints entirely
+        ]);  
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(
