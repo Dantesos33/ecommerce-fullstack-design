@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaThLarge, FaList, FaTimes } from "react-icons/fa";
-import { products } from "@/data/listing-data";
+import { fetchProducts, Product } from "@/data/listing-data";
 import FilterSidebar from "./ListingFilterSidebar";
 import ProductCardGrid from "./ListingCard";
 import ProductCardList from "./ListingCardList";
@@ -12,6 +12,9 @@ type ViewMode = "grid" | "list";
 const ITEMS_PER_PAGE = 9;
 
 const ProductsSection = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [viewMode, setViewMode]           = useState<ViewMode>("grid");
   const [selectedBrands, setSelectedBrands]     = useState<string[]>([]);
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
@@ -23,6 +26,25 @@ const ProductsSection = () => {
   const [verifiedOnly, setVerifiedOnly]   = useState(false);
   const [currentPage, setCurrentPage]     = useState(1);
   const [showPerPage, setShowPerPage]     = useState(9);
+
+  // Fetch products on component mount
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        setLoading(true);
+        const data = await fetchProducts();
+        setProducts(data);
+        setError(null);
+      } catch (err) {
+        console.error('Failed to load products:', err);
+        setError('Failed to load products');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, []);
 
   const toggleBrand = (b: string) =>
     setSelectedBrands((prev) => prev.includes(b) ? prev.filter((x) => x !== b) : [...prev, b]);
@@ -70,6 +92,30 @@ const ProductsSection = () => {
 
   const totalPages = Math.ceil(filtered.length / showPerPage);
   const paginated  = filtered.slice((currentPage - 1) * showPerPage, currentPage * showPerPage);
+
+  if (loading) {
+    return (
+      <div className="w-full bg-slate-50 py-6 md:py-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center h-40 text-slate-400 text-sm">
+            Loading products...
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="w-full bg-slate-50 py-6 md:py-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center h-40 text-red-500 text-sm">
+            {error}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full bg-slate-50 py-6 md:py-8">

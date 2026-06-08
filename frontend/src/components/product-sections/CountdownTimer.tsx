@@ -50,21 +50,21 @@ const CountdownTimer = ({ endDate, className = "" }: CountdownTimerProps) => {
 
   return (
     <div
-      className={`flex items-center gap-2 sm:gap-3 ${className}`}
+      className={`flex items-center gap-2 sm:gap-2.5 ${className}`}
       aria-live="polite"
       aria-label="Sale countdown timer"
     >
       {units.map((unit) => (
         <div
           key={unit.label}
-          className={`flex flex-col items-center gap-1 ${
+          className={`flex flex-col items-center gap-0.5 sm:gap-1 ${
             unit.showOnMobile ? "flex" : "hidden sm:flex"
           }`}
         >
-          <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md bg-slate-700 text-sm font-semibold text-white tabular-nums">
+          <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md bg-slate-700 text-sm font-bold text-white tabular-nums">
             {pad(unit.value)}
           </span>
-          <span className="text-caption text-slate-500">{unit.label}</span>
+          <span className="text-xs text-slate-500 font-medium leading-none">{unit.label}</span>
         </div>
       ))}
     </div>

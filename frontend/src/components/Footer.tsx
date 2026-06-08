@@ -99,7 +99,7 @@ const Footer = () => {
                   {col.links.map((link) => (
                     <li key={link}>
                       <Link
-                        href="#"
+                      href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
                         className="text-ui-muted hover:text-blue-600 transition-colors duration-200"
                       >
                         {link}

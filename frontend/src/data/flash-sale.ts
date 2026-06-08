@@ -9,7 +9,7 @@ export type FlashSaleProduct = {
 };
 
 /** ISO date string for the flash sale countdown target */
-export const flashSaleEndDate = "2026-06-01T00:00:00.000Z";
+export const flashSaleEndDate = "2026-06-15T23:59:59.000Z";
 
 export const flashSale = {
   title: "Deals and offers",
@@ -22,35 +22,35 @@ export const flashSale = {
       name: "Smart watches",
       image: assets.categories.tech.smartWatch,
       discount: "-25%",
-      href: "/products/smart-watches",
+      href: "/products/12",
     },
     {
       id: "flash-2",
       name: "Laptops",
       image: assets.categories.tech.laptops,
       discount: "-25%",
-      href: "/products/laptops",
+      href: "/products/14",
     },
     {
       id: "flash-3",
       name: "GoPro",
       image: assets.categories.tech.gopro,
       discount: "-25%",
-      href: "/products/gopro",
+      href: "/products/15",
     },
     {
       id: "flash-4",
       name: "Headphones",
       image: assets.categories.tech.headphones,
       discount: "-25%",
-      href: "/products/headphones",
+      href: "/products/7",
     },
     {
       id: "flash-5",
       name: "Cameras",
       image: assets.categories.tech.cameras,
       discount: "-25%",
-      href: "/products/cameras",
+      href: "/products/13",
     },
   ] satisfies FlashSaleProduct[],
 };
